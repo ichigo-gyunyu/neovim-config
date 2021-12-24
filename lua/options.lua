@@ -37,8 +37,11 @@ for k, v in pairs(options) do
 end
 
 -- vimscript
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
+local cmd = vim.cmd
+cmd [[set whichwrap+=<,>,[,],h,l]]
+cmd [[set iskeyword+=-]]
+cmd [[au BufWritePre * %s/\s\+$//e]]
+cmd [[au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif]]
 
 -- globals
 vim.g.netrw_winsize=20
