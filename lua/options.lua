@@ -1,3 +1,10 @@
+-- vimscript
+local cmd = vim.cmd
+cmd [[set whichwrap+=<,>,[,],h,l]]
+cmd [[set iskeyword+=-]]
+cmd [[ au BufWritePre * %s/\s\+$//e ]]
+cmd [[ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif ]]
+
 -- vim options
 local options = {
 	backup = false,
@@ -36,12 +43,6 @@ for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
--- vimscript
-local cmd = vim.cmd
-cmd [[set whichwrap+=<,>,[,],h,l]]
-cmd [[set iskeyword+=-]]
-cmd [[au BufWritePre * %s/\s\+$//e]]
-cmd [[au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif]]
 
 -- globals
 vim.g.netrw_winsize=20
