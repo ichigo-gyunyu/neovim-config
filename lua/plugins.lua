@@ -41,6 +41,7 @@ return packer.startup(function(use)
     use "wbthomason/packer.nvim"
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
+    use "kyazdani42/nvim-web-devicons"
 
     use "folke/tokyonight.nvim"
 
@@ -76,6 +77,10 @@ return packer.startup(function(use)
 
     -- Gitsigns
     use "lewis6991/gitsigns.nvim"
+
+    -- Buffers
+    use "akinsho/bufferline.nvim"
+    use "moll/vim-bbye"
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
