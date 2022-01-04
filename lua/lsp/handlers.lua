@@ -43,7 +43,7 @@ M.setup = function()
     })
 end
 
-local function lsp_keymaps(bufnr)
+local function lsp_maps(bufnr)
     local opts = { noremap = true, silent = true }
     local keymap = vim.api.nvim_buf_set_keymap
     keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
@@ -58,10 +58,11 @@ local function lsp_keymaps(bufnr)
 
     vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
     vim.cmd [[ command! Refactor execute 'lua vim.lsp.buf.rename()' ]]
+    vim.cmd [[ au BufWritePre * silent lua vim.lsp.buf.formatting_seq_sync() ]]
 end
 
 M.on_attach = function(_, bufnr)
-    lsp_keymaps(bufnr)
+    lsp_maps(bufnr)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
