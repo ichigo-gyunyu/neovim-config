@@ -4,6 +4,7 @@ cmd [[set whichwrap+=<,>,[,],h,l]]
 cmd [[set iskeyword+=-]]
 cmd [[ au BufWritePre * %s/\s\+$//e ]]
 cmd [[ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif ]]
+cmd [[ cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit! ]]
 
 -- vim options
 local options = {
