@@ -13,14 +13,14 @@ bufferline.setup {
         -- NOTE: this plugin is designed with this icon in mind,
         -- and so changing this is NOT recommended, this is intended
         -- as an escape hatch for people who cannot bear it for whatever reason
-        indicator_icon = "▎",
-        buffer_close_icon = "",
+        indicator_icon = " ",
+        buffer_close_icon = "",
         -- buffer_close_icon = '',
-        modified_icon = "●",
-        close_icon = "",
+        modified_icon = "",
+        close_icon = "",
         -- close_icon = '',
-        left_trunc_marker = "",
-        right_trunc_marker = "",
+        left_trunc_marker = "",
+        right_trunc_marker = "",
         --- name_formatter can be used to change the buffer's label in the bufferline.
         --- Please note some names can/will break the
         --- bufferline so use this at your discretion knowing that it has
@@ -33,7 +33,7 @@ bufferline.setup {
         -- end,
         max_name_length = 30,
         max_prefix_length = 30, -- prefix used when a buffer is de-duplicated
-        tab_size = 20,
+        tab_size = 10,
         diagnostics = false, -- | "nvim_lsp" | "coc",
         diagnostics_update_in_insert = false,
         -- diagnostics_indicator = function(count, level, diagnostics_dict, context)
@@ -58,8 +58,8 @@ bufferline.setup {
         -- offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
         show_buffer_icons = false,
         show_buffer_close_icons = false,
-        show_close_icon = true,
-        show_tab_indicators = true,
+        show_close_icon = false,
+        show_tab_indicators = false,
         persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
         -- can also be a table containing 2 custom separators
         -- [focused and unfocused]. eg: { '|', '|' }
@@ -73,18 +73,24 @@ bufferline.setup {
     },
     highlights = {
         fill = {
-            guifg = { attribute = "fg", highlight = "#ff0000" },
-            guibg = { attribute = "bg", highlight = "TabLine" },
+            -- guifg = { attribute = "fg", highlight = "#ff0000" },
+            -- guibg = { attribute = "bg", highlight = "TabLine" },
+            -- guifg = "#bbbbaa",
+            -- guibg = "#aaaa00",
         },
         background = {
-            guifg = { attribute = "fg", highlight = "TabLine" },
-            guibg = { attribute = "bg", highlight = "TabLine" },
+            -- guifg = { attribute = "fg", highlight = "TabLine" },
+            -- guibg = { attribute = "bg", highlight = "TabLine" },
+            -- guifg = "#bbbbaa",
+            -- guibg = "#aaaa00",
         },
 
         buffer_selected = {
-            guifg = { attribute = "fg", highlight = "#ff0000" },
-            guibg = { attribute = "bg", highlight = "#0000ff" },
-            gui = "none",
+            -- guifg = { attribute = "fg", highlight = "#ff0000" },
+            -- guibg = { attribute = "bg", highlight = "#0000ff" },
+            guifg = "#414868",
+            guibg = "#7aa2f7",
+            gui = "bold",
         },
         buffer_visible = {
             guifg = { attribute = "fg", highlight = "TabLine" },
@@ -147,21 +153,9 @@ bufferline.setup {
             guibg = { attribute = "bg", highlight = "TabLine" },
         },
 
-        separator = {
-            guifg = { attribute = "bg", highlight = "TabLine" },
-            guibg = { attribute = "bg", highlight = "TabLine" },
-        },
-        separator_selected = {
-            guifg = { attribute = "bg", highlight = "Normal" },
-            guibg = { attribute = "bg", highlight = "Normal" },
-        },
-        -- separator_visible = {
-        --   guifg = {attribute='bg',highlight='TabLine'},
-        --   guibg = {attribute='bg',highlight='TabLine'}
-        --   },
         indicator_selected = {
-            guifg = { attribute = "fg", highlight = "LspDiagnosticsDefaultHint" },
-            guibg = { attribute = "bg", highlight = "Normal" },
+            guifg = "#7aa2f7",
+            guibg = "#7aa2f7",
         },
     },
 }
