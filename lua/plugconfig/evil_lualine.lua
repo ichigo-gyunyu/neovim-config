@@ -103,7 +103,7 @@ local filesize = {
 local progress = {
     function()
         local total_lines = vim.fn.line "$"
-        local location = "%3l:%v"
+        local location = "%l:%v"
         return location .. "/" .. total_lines
     end,
 }
