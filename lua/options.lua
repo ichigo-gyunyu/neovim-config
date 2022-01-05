@@ -2,10 +2,35 @@
 local cmd = vim.cmd
 cmd [[set whichwrap+=<,>,[,],h,l]]
 cmd [[set iskeyword+=-]]
-cmd [[ au BufWritePre * %s/\s\+$//e ]]
-cmd [[ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif ]]
 cmd [[ cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit! ]]
-cmd [[ set formatoptions-=cro ]]
+
+-- autocommands
+cmd [[
+    augroup _general
+        autocmd!
+        autocmd BufWinEnter * :set formatoptions-=cro
+        autocmd BufWritePre * %s/\s\+$//e
+        autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+    augroup end
+
+    augroup _git
+    autocmd!
+        autocmd FileType gitcommit setlocal wrap
+        autocmd FileType gitcommit setlocal spell
+    augroup end
+
+    augroup _markdown
+        autocmd!
+        autocmd FileType markdown setlocal wrap
+        autocmd FileType markdown setlocal spell
+    augroup end
+
+    augroup _latex
+        autocmd!
+        autocmd FileType tex setlocal wrap
+        autocmd FileType tex setlocal spell
+    augroup end
+]]
 
 -- vim options
 local options = {
@@ -24,6 +49,7 @@ local options = {
     splitbelow = true,
     splitright = true,
     swapfile = false,
+    hidden = true,
     termguicolors = true,
     timeoutlen = 500,
     undofile = true,
@@ -47,3 +73,4 @@ end
 
 -- globals
 vim.g.netrw_winsize = 20
+vim.g.tex_flavor = "latex"
