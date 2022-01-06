@@ -17,4 +17,8 @@ M.sumneko_lua = {
     },
 }
 
+M.clangd = {
+    cmd = { "clangd", "--background-index" },
+}
+
 return M
