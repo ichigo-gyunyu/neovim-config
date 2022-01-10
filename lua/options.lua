@@ -2,7 +2,7 @@
 local cmd = vim.cmd
 cmd [[set whichwrap+=<,>,[,],h,l]]
 cmd [[set iskeyword+=-]]
-cmd [[ cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit! ]]
+cmd [[ cnoremap w\!\! execute 'silent! write !sudo tee % >/dev/null' <bar> edit! ]]
 
 -- autocommands
 cmd [[
