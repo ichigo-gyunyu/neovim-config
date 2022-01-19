@@ -13,12 +13,6 @@ cmd [[
         autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
     augroup end
 
-    augroup _views
-        autocmd!
-        autocmd BufWinLeave *.* mkview
-        autocmd BufWinEnter *.* silent loadview
-    augroup end
-
     augroup _git
     autocmd!
         autocmd FileType gitcommit setlocal wrap

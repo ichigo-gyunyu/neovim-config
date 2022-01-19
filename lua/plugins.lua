@@ -98,6 +98,9 @@ return packer.startup(function(use)
     -- Startup
     use "goolord/alpha-nvim"
 
+    -- Views
+    use "vim-scripts/restore_view.vim"
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
