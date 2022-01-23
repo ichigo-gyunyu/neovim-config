@@ -5,3 +5,5 @@
 " endif
 
 " nnoremap <buffer> <leader>r :TermExec cmd=make<CR>
+
+nnoremap <buffer> <F5> :TermExec cmd="g++ % && ./a.out"<CR>
