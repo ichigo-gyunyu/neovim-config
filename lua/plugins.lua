@@ -93,7 +93,7 @@ return packer.startup(function(use)
     use "lewis6991/impatient.nvim"
 
     -- Indentline
-    use "lukas-reineke/indent-blankline.nvim"
+    -- use "lukas-reineke/indent-blankline.nvim"
 
     -- Startup
     use "goolord/alpha-nvim"
