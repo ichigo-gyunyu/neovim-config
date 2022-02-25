@@ -63,6 +63,13 @@ end
 
 M.on_attach = function(_, bufnr)
     lsp_maps(bufnr)
+
+    -- LSP signature hint
+    local status_ok, lsp_signature = pcall(require, "lsp_signature")
+    if not status_ok then
+        return
+    end
+    lsp_signature.on_attach()
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

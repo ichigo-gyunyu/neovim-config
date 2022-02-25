@@ -18,7 +18,7 @@ M.sumneko_lua = {
 }
 
 M.clangd = {
-    cmd = { "clangd", "--background-index" },
+    cmd = { "clangd", "--background-index", "--header-insertion=iwyu" },
 }
 
 return M
