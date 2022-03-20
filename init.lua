@@ -16,5 +16,3 @@ require "plugconfig.toggleterm"
 require "plugconfig.impatient"
 require "plugconfig.indentline"
 require "plugconfig.alpha"
-
-vim.cmd [[ echo "init.lua done" ]]

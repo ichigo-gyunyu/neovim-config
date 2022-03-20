@@ -71,7 +71,7 @@ local branch = {
 
 local filename = {
     "filename",
-    color = { fg = colors.cyan, gui = "bold" },
+    color = { fg = colors.blue, gui = "bold" },
     cond = buffer_not_empty,
 }
 
