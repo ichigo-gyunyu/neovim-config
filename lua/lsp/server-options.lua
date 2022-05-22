@@ -18,7 +18,15 @@ M.sumneko_lua = {
 }
 
 M.clangd = {
-    cmd = { "clangd", "--background-index", "--header-insertion=iwyu" },
+    cmd = {
+        "clangd",
+        "--background-index",
+        "--header-insertion=iwyu",
+    },
+}
+
+M.asm_lsp = {
+    cmd = { "asm-lsp" },
 }
 
 return M
