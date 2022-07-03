@@ -29,4 +29,8 @@ M.asm_lsp = {
   cmd = { "asm-lsp" },
 }
 
+M.tsserver = {
+  cmd = { "typescript-language-server", "--stdio" },
+}
+
 return M

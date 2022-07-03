@@ -13,45 +13,33 @@ local check_backspace = function()
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match "%s" == nil
 end
 
-local kind_icons =
-  {
-    Text = "",
-    Method = "m",
-    Function = "",
-    Constructor = "",
-    Method = "",
-    Function = "",
-    Constructor = "",
-    Field = "",
-    Variable = "",
-    Variable = "",
-    Class = "",
-    Interface = "",
-    Module = "",
-    Module = "",
-    Property = "",
-    Unit = "",
-    Value = "",
-    Enum = "",
-    Keyword = "",
-    Keyword = "",
-    Snippet = "",
-    Snippet = "",
-    Color = "",
-    File = "",
-    Reference = "",
-    Folder = "",
-    EnumMember = "",
-    Constant = "",
-    Struct = "",
-    Event = "",
-    Operator = "",
-    TypeParameter = "",
-  }, 
-vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
-vim.api.nvim_set_hl(0, "CmpItemKindTabnine", { fg = "#CA42F0" })
-vim.api.nvim_set_hl(0, "CmpItemKindEmoji", { fg = "#FDE030" })
-vim.api.nvim_set_hl(0, "CmpItemKindCrate", { fg = "#F64D00" })
+local kind_icons = {
+  Text = "",
+  Function = "",
+  Constructor = "",
+  Method = "",
+  Field = "",
+  Variable = "",
+  Class = "",
+  Interface = "",
+  Module = "",
+  Property = "",
+  Unit = "",
+  Value = "",
+  Enum = "",
+  Keyword = "",
+  Snippet = "",
+  Color = "",
+  File = "",
+  Reference = "",
+  Folder = "",
+  EnumMember = "",
+  Constant = "",
+  Struct = "",
+  Event = "",
+  Operator = "",
+  TypeParameter = "",
+}
 
 cmp.setup {
   snippet = {
@@ -113,25 +101,6 @@ cmp.setup {
       -- Kind icons
       vim_item.kind = kind_icons[vim_item.kind]
 
-      if entry.source.name == "cmp_tabnine" then
-        vim_item.kind = icons.misc.Robot
-        vim_item.kind_hl_group = "CmpItemKindTabnine"
-      end
-      if entry.source.name == "copilot" then
-        vim_item.kind = icons.git.Octoface
-        vim_item.kind_hl_group = "CmpItemKindCopilot"
-      end
-
-      if entry.source.name == "emoji" then
-        vim_item.kind = icons.misc.Smiley
-        vim_item.kind_hl_group = "CmpItemKindEmoji"
-      end
-
-      if entry.source.name == "crates" then
-        vim_item.kind = icons.misc.Package
-        vim_item.kind_hl_group = "CmpItemKindCrate"
-      end
-
       -- NOTE: order matters
       vim_item.menu = ({
         nvim_lsp = "",
@@ -161,11 +130,11 @@ cmp.setup {
   },
   window = {
     documentation = {
-      -- border = "rounded",
+      border = "rounded",
       winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
     },
     completion = {
-      -- border = "rounded",
+      border = "rounded",
       winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
     },
   },
