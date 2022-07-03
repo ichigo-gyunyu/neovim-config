@@ -13,47 +13,45 @@ local check_backspace = function()
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match "%s" == nil
 end
 
-
-local kind_icons = {
-      Text = "",
-      Method = "m",
-      Function = "",
-      Constructor = "",
-      Method = "",
-      Function = "",
-      Constructor = "",
-      Field = "",
-      Variable = "",
-      Variable = "",
-      Class = "",
-      Interface = "",
-      Module = "",
-      Module = "",
-      Property = "",
-      Unit = "",
-      Value = "",
-      Enum = "",
-      Keyword = "",
-      Keyword = "",
-      Snippet = "",
-      Snippet = "",
-      Color = "",
-      File = "",
-      Reference = "",
-      Folder = "",
-      EnumMember = "",
-      Constant = "",
-      Struct = "",
-      Event = "",
-      Operator = "",
-      TypeParameter = "",
-},
-
+local kind_icons =
+  {
+    Text = "",
+    Method = "m",
+    Function = "",
+    Constructor = "",
+    Method = "",
+    Function = "",
+    Constructor = "",
+    Field = "",
+    Variable = "",
+    Variable = "",
+    Class = "",
+    Interface = "",
+    Module = "",
+    Module = "",
+    Property = "",
+    Unit = "",
+    Value = "",
+    Enum = "",
+    Keyword = "",
+    Keyword = "",
+    Snippet = "",
+    Snippet = "",
+    Color = "",
+    File = "",
+    Reference = "",
+    Folder = "",
+    EnumMember = "",
+    Constant = "",
+    Struct = "",
+    Event = "",
+    Operator = "",
+    TypeParameter = "",
+  }, 
 vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
 vim.api.nvim_set_hl(0, "CmpItemKindTabnine", { fg = "#CA42F0" })
 vim.api.nvim_set_hl(0, "CmpItemKindEmoji", { fg = "#FDE030" })
 vim.api.nvim_set_hl(0, "CmpItemKindCrate", { fg = "#F64D00" })
-
 
 cmp.setup {
   snippet = {
@@ -63,8 +61,8 @@ cmp.setup {
   },
 
   mapping = cmp.mapping.preset.insert {
-    ['<C-k>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),
-    ['<C-j>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
+    ["<C-k>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
+    ["<C-j>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
     ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
     ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
     ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),

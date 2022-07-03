@@ -10,8 +10,8 @@ end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
-nvim_tree.setup({
-    view = {
+nvim_tree.setup {
+  view = {
     width = 30,
     height = 30,
     hide_root_folder = false,
@@ -24,4 +24,6 @@ nvim_tree.setup({
         { key = "h", cb = tree_cb "close_node" },
         { key = "v", cb = tree_cb "vsplit" },
       },
-    },}})
+    },
+  },
+}
