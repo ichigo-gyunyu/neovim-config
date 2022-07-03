@@ -2,7 +2,7 @@
 local options = {
   backup = false,
   clipboard = "unnamedplus",
-  completeopt = { "menu", "menuone", "noselect" },
+  completeopt = { "menuone", "noselect" },
   fileencoding = "utf-8",
   hlsearch = false,
   ignorecase = true,

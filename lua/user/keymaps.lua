@@ -50,6 +50,10 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
+-- Delete not Cut
+keymap("n", "d", '"_d', opts)
+keymap("v", "d", '"_d', opts)
+
 -- Telescope
 keymap(
   "n",
