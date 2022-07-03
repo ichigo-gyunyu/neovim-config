@@ -1,18 +1,17 @@
-require "options"
-require "keymaps"
-require "plugins"
-require "colourscheme"
-require "lsp"
-
-require "plugconfig.cmp"
-require "plugconfig.telescope"
-require "plugconfig.treesitter"
-require "plugconfig.autopairs"
-require "plugconfig.comment"
-require "plugconfig.gitsigns"
-require "plugconfig.bufferline"
-require "plugconfig.evil_lualine"
-require "plugconfig.toggleterm"
-require "plugconfig.impatient"
-require "plugconfig.indentline"
-require "plugconfig.alpha"
+require("user.options")
+require("user.keymaps")
+require("user.plugins")
+require("user.colourscheme")
+require("user.cmp")
+require("user.nvim-webdev-icons")
+require("user.nvim-tree")
+require("user.autopairs")
+require("user.bufferline")
+require("user.lualine")
+require("user.project")
+require("user.impatient")
+require("user.telescope")
+require("user.treesitter")
+require("user.gitsigns")
+require("user.comment")
+require("user.lsp")

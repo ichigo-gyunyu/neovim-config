@@ -38,68 +38,34 @@ packer.init {
 }
 
 return packer.startup(function(use)
-    use "wbthomason/packer.nvim"
-    use "nvim-lua/popup.nvim"
+
+    use 'wbthomason/packer.nvim' -- Packer manages itself
     use "nvim-lua/plenary.nvim"
     use "kyazdani42/nvim-web-devicons"
-
+    use "kyazdani42/nvim-tree.lua"
+    use "windwp/nvim-autopairs"
+    use "akinsho/bufferline.nvim"
+    use "nvim-lualine/lualine.nvim"
+    use "ahmedkhalf/project.nvim"
+    use "lewis6991/impatient.nvim"
     use "folke/tokyonight.nvim"
-
-    -- cmp
+    use "rose-pine/neovim"
     use "hrsh7th/nvim-cmp"
     use "hrsh7th/cmp-buffer"
     use "hrsh7th/cmp-path"
     use "hrsh7th/cmp-cmdline"
     use "hrsh7th/cmp-nvim-lua"
     use "hrsh7th/cmp-nvim-lsp"
-
+    use "saadparwaiz1/cmp_luasnip"
     use "L3MON4D3/LuaSnip"
-
-    -- LSP
     use "neovim/nvim-lspconfig"
     use "williamboman/nvim-lsp-installer"
     use "jose-elias-alvarez/null-ls.nvim"
     use "ray-x/lsp_signature.nvim"
-
-    -- Telescope
     use "nvim-telescope/telescope.nvim"
-
-    -- Treesitter
-    use {
-        "nvim-treesitter/nvim-treesitter",
-        run = ":TSUpdate",
-    }
-
-    -- Autopairs
-    use "windwp/nvim-autopairs"
-
-    -- Comments
-    use "numToStr/Comment.nvim"
-    use "JoosepAlviste/nvim-ts-context-commentstring"
-
-    -- Gitsigns
+    use "nvim-treesitter/nvim-treesitter"
     use "lewis6991/gitsigns.nvim"
-
-    -- Buffers
-    use "akinsho/bufferline.nvim"
-    use "moll/vim-bbye"
-
-    -- Statusline
-    use "nvim-lualine/lualine.nvim"
-
-    -- Terminal
-    use "akinsho/toggleterm.nvim"
-
-    -- Impatient
-    use "lewis6991/impatient.nvim"
-
-    -- Indentline
-    -- use "lukas-reineke/indent-blankline.nvim"
-
-    -- Startup
-    use "goolord/alpha-nvim"
-
-    -- Views
+    use "numToStr/Comment.nvim"
     use "vim-scripts/restore_view.vim"
 
     -- Automatically set up your configuration after cloning packer.nvim

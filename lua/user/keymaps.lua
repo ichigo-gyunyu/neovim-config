@@ -1,5 +1,5 @@
 local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 
 -- Leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -12,7 +12,7 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<leader>e", ":Lex<CR>", opts)
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<leader>r", ":TermExec cmd=make<CR>", opts)
 
 -- Resize with arrows
@@ -24,7 +24,7 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Navigate buffers
 keymap("n", "<Tab>", ":bnext<CR>", opts)
 keymap("n", "<S-Tab>", ":bprevious<CR>", opts)
-keymap("n", "<leader>w", ":Bdelete<CR>", opts)
+keymap("n", "<leader>w", ":bdelete<CR>", opts)
 
 -- Select all
 keymap("n", "<C-a>", "ggVG", opts)
@@ -55,6 +55,12 @@ keymap(
     "n",
     "<leader>f",
     "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
+    opts
+)
+keymap(
+    "n",
+    "<leader>b",
+    "<cmd>lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
     opts
 )
 keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", opts)

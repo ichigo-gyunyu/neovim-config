@@ -7,11 +7,11 @@ end
 -- Alternatively, you may also register handlers on specific server instances instead (see example below).
 lsp_installer.on_server_ready(function(server)
     local opts = {
-        on_attach = require("lsp.handlers").on_attach,
-        capabilities = require("lsp.handlers").capabilities,
+        on_attach = require("user.lsp.handlers").on_attach,
+        capabilities = require("user.lsp.handlers").capabilities,
     }
 
-    local localopts = require("lsp.server-options")[server.name]
+    local localopts = require("user.lsp.server-options")[server.name]
     if type(localopts) == "table" then
         opts = vim.tbl_deep_extend("force", localopts, opts)
     end
