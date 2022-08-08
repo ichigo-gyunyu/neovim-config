@@ -4,4 +4,10 @@ if not status_ok then
 end
 
 telescope.load_extension "projects"
-telescope.setup()
+telescope.setup {
+  pickers = {
+    find_files = {
+      find_command = { "rg", "--files", "--hidden", "-g", "!.git" },
+    },
+  },
+}
