@@ -42,13 +42,13 @@ return packer.startup(function(use)
   use { "nvim-lua/plenary.nvim", commit = "968a4b9afec0c633bc369662e78f8c5db0eba249" }
   use { "kyazdani42/nvim-web-devicons", commit = "8d2c5337f0a2d0a17de8e751876eeb192b32310e" }
   use { "kyazdani42/nvim-tree.lua", commit = "19dcacf06e26ca8cf2f160768044cc11db4e66fb" }
-  use { "windwp/nvim-autopairs", commit = "4a95b3982be7397cd8e1370d1a09503f9b002dbf" }
+  use { "windwp/nvim-autopairs", commit = "5a3523ddb573804752de6c021c5cb82e267b79ca" }
   use { "akinsho/bufferline.nvim", commit = "aebb10c90a5c5fbef06d65dd898bb250ea8ccb41" }
   use { "nvim-lualine/lualine.nvim", commit = "5113cdb32f9d9588a2b56de6d1df6e33b06a554a" }
   use { "ahmedkhalf/project.nvim", commit = "541115e762764bc44d7d3bf501b6e367842d3d4f" }
   use { "lewis6991/impatient.nvim", commit = "969f2c5c90457612c09cf2a13fee1adaa986d350" }
   use { "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" }
-  use { "hrsh7th/nvim-cmp", commit = "9897465a7663997b7b42372164ffc3635321a2fe" }
+  use { "hrsh7th/nvim-cmp", commit = "cfafe0a1ca8933f7b7968a287d39904156f2c57d" }
   use { "hrsh7th/cmp-buffer", commit = "62fc67a2b0205136bc3e312664624ba2ab4a9323" }
   use { "hrsh7th/cmp-path", commit = "981baf9525257ac3269e1b6701e376d6fbff6921" }
   use { "hrsh7th/cmp-cmdline", commit = "c36ca4bc1dedb12b4ba6546b96c43896fd6e7252" }

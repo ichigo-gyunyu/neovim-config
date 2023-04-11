@@ -17,3 +17,10 @@ treesitter_configs.setup {
     enable_autocmd = false,
   },
 }
+
+local status_ok_2, treesitter_parsers = pcall(require, "nvim-treesitter.parsers")
+if not status_ok_2 then
+  return
+end
+
+treesitter_parsers.filetype_to_parsername["p4"] = "c"

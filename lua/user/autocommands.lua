@@ -27,3 +27,9 @@ vim.api.nvim_create_autocmd({ "BufReadPost" }, {
     vim.cmd [[if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif]]
   end,
 })
+
+-- for p4 files
+vim.api.nvim_create_autocmd(
+  { "BufNewFile", "BufRead" },
+  { pattern = "*.p4", command = "set filetype=p4" }
+)
