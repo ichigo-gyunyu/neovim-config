@@ -1,6 +1,6 @@
 return {
-	"echasnovski/mini.comment",
-	version = "*",
-	event = "VeryLazy",
-	config = true,
+  "echasnovski/mini.comment",
+  version = "*",
+  event = "VeryLazy",
+  config = true,
 }

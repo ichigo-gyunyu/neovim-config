@@ -1,5 +1,5 @@
 return {
-	"echasnovski/mini.trailspace",
-	event = "VeryLazy",
-	config = true,
+  "echasnovski/mini.trailspace",
+  event = "VeryLazy",
+  config = true,
 }
