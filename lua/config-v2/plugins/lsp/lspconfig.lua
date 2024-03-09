@@ -39,6 +39,7 @@ return {
     )
 
     local on_attach = function(client, bufnr)
+      -- Setup keybinds
       local keymap_opts = {
         noremap = true,
         silent = true,
@@ -66,6 +67,19 @@ return {
       vim.keymap.set({ "n", "v" }, "gl", vim.diagnostic.open_float, keymap_opts)
       keymap_opts.desc = "Rename"
       vim.keymap.set({ "n", "v" }, "<leader>rn", vim.diagnostic.open_float, keymap_opts)
+
+      -- Highlight references under cursor
+      if client and client.server_capabilities.documentHighlightProvider then
+        vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+          buffer = bufnr,
+          callback = vim.lsp.buf.document_highlight,
+        })
+
+        vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
+          buffer = bufnr,
+          callback = vim.lsp.buf.clear_references,
+        })
+      end
     end
 
     local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
