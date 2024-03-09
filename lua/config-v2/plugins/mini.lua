@@ -1,5 +1,6 @@
 return {
-  "echasnovski/mini.bufremove",
+  "echasnovski/mini.nvim",
+  version = "*",
   keys = {
     {
       "<leader>w",
@@ -16,4 +17,11 @@ return {
       desc = "Delete Buffer (Force)",
     },
   },
+  config = function()
+    require("mini.ai").setup()
+    require("mini.surround").setup()
+    require("mini.pairs").setup()
+    require("mini.comment").setup()
+    require("mini.trailspace").setup()
+  end,
 }

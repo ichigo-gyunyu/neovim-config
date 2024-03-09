@@ -3,6 +3,7 @@ return {
   dependencies = {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
+    "j-hui/fidget.nvim",
   },
   opts = {
     diagnostics = {
@@ -18,10 +19,9 @@ return {
               globals = { "vim" },
             },
             workspace = {
-              -- make language server aware of runtime files
+              checkThirdParty = false,
               library = {
-                [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                [vim.fn.stdpath("config") .. "/lua"] = true,
+                unpack(vim.api.nvim_get_runtime_file("", true)),
               },
             },
           },
@@ -64,6 +64,8 @@ return {
       vim.keymap.set({ "n", "v" }, "<leader>.", vim.lsp.buf.code_action, keymap_opts)
       keymap_opts.desc = "Line Diagnostics"
       vim.keymap.set({ "n", "v" }, "gl", vim.diagnostic.open_float, keymap_opts)
+      keymap_opts.desc = "Rename"
+      vim.keymap.set({ "n", "v" }, "<leader>rn", vim.diagnostic.open_float, keymap_opts)
     end
 
     local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }

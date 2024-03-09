@@ -31,6 +31,7 @@ return {
         },
 
         "diff",
+        "diagnostics",
       },
 
       lualine_c = {

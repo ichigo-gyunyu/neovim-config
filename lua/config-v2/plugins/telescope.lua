@@ -1,6 +1,6 @@
 return {
   "nvim-telescope/telescope.nvim",
-  version = "0.1.3",
+  tag = "0.1.5",
   cmd = "Telescope",
   keys = function()
     local builtin = require("telescope.builtin")
@@ -57,7 +57,7 @@ return {
         enable_preview = true,
       },
       find_files = {
-        find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+        find_command = { "rg", "--files", "--hidden", "--no-ignore-vcs", "--glob", "!**/.git/*" },
       },
     },
   },
