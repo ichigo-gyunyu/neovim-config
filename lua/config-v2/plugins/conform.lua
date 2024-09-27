@@ -14,8 +14,11 @@ return {
   version = "*",
   opts = {
     formatters_by_ft = {
+      json = { "jq" },
       lua = { "stylua" },
+      xml = { "xmlformat" },
+      yaml = { "yamlfmt" },
     },
-    format_on_save = { timeout_ms = 500, lsp_fallback = true },
+    -- format_on_save = { timeout_ms = 500, lsp_fallback = true },
   },
 }
