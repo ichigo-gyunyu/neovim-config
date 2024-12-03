@@ -11,6 +11,12 @@ return {
     },
 
     servers = {
+      gopls = {},
+
+      jsonls = {},
+
+      lemminx = {},
+
       lua_ls = {
         settings = {
           Lua = {

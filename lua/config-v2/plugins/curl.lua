@@ -5,5 +5,7 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim"
   },
-  config = true
+  opts = {
+    open_with = "split"
+  }
 }

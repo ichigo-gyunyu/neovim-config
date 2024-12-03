@@ -4,5 +4,14 @@ return {
   dependencies = {
     "williamboman/mason.nvim",
   },
-  config = true,
+  opts = {
+    ensure_installed = {
+      -- "gopls",
+      "jsonls",
+      "lemminx",
+      "lua_ls",
+      -- "omnisharp",
+      "rust_analyzer",
+    },
+  },
 }
