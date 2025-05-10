@@ -7,8 +7,8 @@ return {
   opts = {
     ensure_installed = {
       -- "gopls",
-      "jsonls",
-      "lemminx",
+      -- "jsonls",
+      -- "lemminx",
       "lua_ls",
       -- "omnisharp",
       "rust_analyzer",
