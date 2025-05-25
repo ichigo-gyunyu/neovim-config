@@ -6,6 +6,8 @@ return {
   },
   opts = {
     ensure_installed = {
+      "clangd",
+      -- "clang-format",
       -- "gopls",
       -- "jsonls",
       -- "lemminx",

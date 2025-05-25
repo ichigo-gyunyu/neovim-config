@@ -11,6 +11,8 @@ return {
     },
 
     servers = {
+      clangd = {},
+
       gopls = {},
 
       jsonls = {},
