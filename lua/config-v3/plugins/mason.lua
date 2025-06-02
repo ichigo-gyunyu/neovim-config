@@ -3,6 +3,7 @@ return {
   cmd = "Mason",
   version = "*",
   opts = {
+    PATH = "prepend",
     ui = {
       icons = {
         package_installed = "✓",

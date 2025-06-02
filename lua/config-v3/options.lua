@@ -28,6 +28,7 @@ local options = {
   signcolumn = "yes",
   scrolloff = 8,
   sidescrolloff = 8,
+  winborder = "rounded"
 }
 
 for k, v in pairs(options) do

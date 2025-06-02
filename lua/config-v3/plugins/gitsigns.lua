@@ -2,6 +2,7 @@ return {
   "lewis6991/gitsigns.nvim",
   event = "VeryLazy",
   version = "*",
+
   opts = {
     signs = {
       add = { text = "▎" },
@@ -11,6 +12,7 @@ return {
       changedelete = { text = "▎" },
       untracked = { text = "▎" },
     },
+
     on_attach = function(bufnr)
       local function map(mode, l, r, desc)
         vim.keymap.set(mode, l, r, { buffer = bufnr, desc = desc })
@@ -28,6 +30,7 @@ return {
       map("n", "<leader>hu", "<cmd>Gitsigns undo_stage_hunk<CR>", "Undo stage hunk")
       map("n", "<leader>hp", "<cmd>Gitsigns prev_hunk<CR>", "Preview hunk")
       map("n", "<leader>hb", '<cmd>lua require("gitsigns").blame_line{full=true}<CR>', "Blame line")
+
       map("n", "<leader>hB", "<cmd>Gitsigns toggle_current_line_blame<CR>", "Toggle line blame")
       map("n", "<leader>hd", "<cmd>Gitsigns diffthis<CR>", "Diff this")
       map("n", "<leader>hD", '<cmd>lua require("gitsigns").diffthis("~")<CR>', "Diff this ~")

@@ -30,4 +30,4 @@ vim.keymap.set("v", "<C-C>", '"+y', { desc = "Copy to system clipboard with Ctrl
 vim.keymap.set("v", "<C-V>", '<ESC>"+p', { desc = "Paste from system clipboard with Ctrl+Shift+v" })
 
 -- Escape in terminal mode
-vim.keymap.set("t", "<ESC><ESC>", "<C-\\><C-n>")
+vim.keymap.set("t", "<ESC><ESC>", "<C-\\><C-n>", { desc = "Escape in terminal mode" })

@@ -4,7 +4,7 @@ return {
   cmd = "ConformInfo",
   keys = {
     {
-      "<leader>cf",
+      "<M-F>",
       function()
         require("conform").format({ async = true, lsp_fallback = true })
       end,
@@ -14,9 +14,10 @@ return {
   version = "*",
   opts = {
     formatters_by_ft = {
+      cpp = { "clang-format" },
       json = { "jq" },
       lua = { "stylua" },
-      -- xml = { "xmlformat" },
+      xml = { "xmlformat" },
       yaml = { "yamlfmt" },
     },
     -- format_on_save = { timeout_ms = 500, lsp_fallback = true },
