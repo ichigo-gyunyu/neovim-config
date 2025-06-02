@@ -3,19 +3,15 @@ return {
   version = "*",
   event = "VeryLazy",
   dependencies = {
-
     "nvim-tree/nvim-web-devicons",
   },
   opts = {
     options = {
-
       theme = "auto",
       globalstatus = true,
       component_separators = { left = "", right = "" },
-
       section_separators = { left = "", right = "" },
       disabled_filetypes = { "neotree" },
-
       always_divide_middle = true,
     },
     sections = {
@@ -29,15 +25,11 @@ return {
         },
       },
 
-
       lualine_b = {
         {
-
           "branch",
           icon = "",
         },
-
-
         "diff",
         "diagnostics",
       },
