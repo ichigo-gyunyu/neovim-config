@@ -31,3 +31,16 @@ vim.keymap.set("v", "<C-V>", '<ESC>"+p', { desc = "Paste from system clipboard w
 
 -- Escape in terminal mode
 vim.keymap.set("t", "<ESC><ESC>", "<C-\\><C-n>", { desc = "Escape in terminal mode" })
+
+-- Toggleterm send lines/selection to terminal
+vim.keymap.set({ "n", "v" }, "<C-F5>", function()
+	local mode = vim.fn.mode()
+	if mode == "V" then
+
+		require("toggleterm").send_lines_to_terminal("visual_lines", true, { args = vim.v.count })
+	elseif mode == "v" then
+		require("toggleterm").send_lines_to_terminal("visual_selection", true, { args = vim.v.count })
+	else
+		require("toggleterm").send_lines_to_terminal("single_line", true, { args = vim.v.count })
+	end
+end, { desc = "Send lines/selection to terminal" })
