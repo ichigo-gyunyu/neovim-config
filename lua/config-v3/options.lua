@@ -28,7 +28,7 @@ local options = {
   signcolumn = "yes",
   scrolloff = 8,
   sidescrolloff = 8,
-  winborder = "rounded",
+  -- winborder = "rounded",
   exrc = true -- project local configurations via .nvim.lua
 }
 

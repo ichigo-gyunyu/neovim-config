@@ -1,7 +1,8 @@
 vim.lsp.enable({
   "clangd",
   "jsonls",
-  "lua_ls"
+  "lua_ls",
+  "rust_analyzer",
 })
 
 vim.diagnostic.config({
@@ -19,19 +20,14 @@ vim.diagnostic.config({
     numhl = {
       [vim.diagnostic.severity.ERROR] = "ErrorMsg",
       [vim.diagnostic.severity.WARN] = "WarningMsg",
-
     },
   },
-
 })
 
-vim.api.nvim_create_autocmd('LspAttach', {
+vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(ev)
     local client = vim.lsp.get_client_by_id(ev.data.client_id)
-    if client:supports_method('textDocument/completion') then
-      vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
-    end
-    if client:supports_method('textDocument/documentHighlight') then
+    if client:supports_method("textDocument/documentHighlight") then
       vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
         buffer = ev.buf,
         callback = vim.lsp.buf.document_highlight,
