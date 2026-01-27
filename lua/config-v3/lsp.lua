@@ -1,6 +1,7 @@
 vim.lsp.enable({
   "clangd",
   "jsonls",
+  "lemminx",
   "lua_ls",
   "rust_analyzer",
 })
