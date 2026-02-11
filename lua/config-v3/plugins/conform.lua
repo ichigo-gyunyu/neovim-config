@@ -17,6 +17,7 @@ return {
       cpp = { "clang-format" },
       json = { "jq" },
       lua = { "stylua" },
+      python = { "black" },
       xml = { "xmlformat" },
       yaml = { "yamlfmt" },
     },

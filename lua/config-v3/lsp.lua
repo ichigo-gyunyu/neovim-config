@@ -3,6 +3,7 @@ vim.lsp.enable({
   "jsonls",
   "lemminx",
   "lua_ls",
+  "pyright",
   "rust_analyzer",
 })
 
