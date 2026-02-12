@@ -1,5 +1,5 @@
 return {
-  cmd = { vim.fn.expand("$HOME/.local/share/nvim/mason/bin/rust-analyzer") },
+  cmd = { vim.fn.expand("rust-analyzer") },
   filetypes = { "rust" },
   root_markers = { ".git", "Cargo.toml" },
   capabilities = {

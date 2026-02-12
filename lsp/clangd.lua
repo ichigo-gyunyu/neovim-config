@@ -1,5 +1,5 @@
 return {
-  cmd = { vim.fn.expand("$HOME/.local/share/nvim/mason/bin/clangd"), "--background-index" },
+  cmd = { vim.fn.expand("clangd"), "--background-index" },
   filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
   root_markers = {
     '.clangd',

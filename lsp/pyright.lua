@@ -1,5 +1,5 @@
 return {
-  cmd = { vim.fn.expand("$HOME/.local/share/nvim/mason/bin/pyright-langserver"), "--stdio" },
+  cmd = { vim.fn.expand("pyright-langserver"), "--stdio" },
   filetypes = { "python" },
   root_markers = {
     "pyrightconfig.json",

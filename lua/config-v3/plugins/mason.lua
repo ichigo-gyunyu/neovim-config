@@ -1,6 +1,5 @@
 return {
   "williamboman/mason.nvim",
-  cmd = "Mason",
   version = "*",
   opts = {
     PATH = "prepend",
