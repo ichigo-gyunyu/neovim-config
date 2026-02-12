@@ -1,9 +1,10 @@
 vim.lsp.enable({
+  "basedpyright",
   "clangd",
   "jsonls",
   "lemminx",
   "lua_ls",
-  "pyright",
+  -- "pyright",
   "rust_analyzer",
 })
 
