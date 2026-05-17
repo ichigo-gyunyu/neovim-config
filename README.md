@@ -1,3 +1,3 @@
-# Neovim Config for Windows
+# Neovim Config
 
-Personal Neovim config for Windows. Requires Neovim 0.12.2 or later.
+Personal Neovim config. Requires Neovim 0.12.2 or later.
