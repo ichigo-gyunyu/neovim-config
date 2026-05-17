@@ -1,11 +1,11 @@
 local options = {
   backup = false,
-  completeopt = { "menuone", "noselect" },
+  completeopt = { "menuone", "noinsert" },
   fileencoding = "utf-8",
   hlsearch = false,
   ignorecase = true,
   mouse = "a",
-  pumheight = 10,
+  pumheight = 20,
   showmode = false,
   showtabline = 2,
   smartcase = true,
@@ -19,8 +19,8 @@ local options = {
   updatetime = 300,
   writebackup = false,
   expandtab = true,
-  shiftwidth = 4,
-  tabstop = 4,
+  shiftwidth = 2,
+  tabstop = 2,
   number = true,
   relativenumber = true,
   cursorline = false,
@@ -28,10 +28,11 @@ local options = {
   signcolumn = "yes",
   scrolloff = 8,
   sidescrolloff = 8,
-  -- winborder = "rounded",
-  exrc = true -- project local configurations via .nvim.lua
+  winborder = "rounded",
 }
 
-for k, v in pairs(options) do
-  vim.opt[k] = v
+for key, value in pairs(options) do
+  vim.opt[key] = value
 end
+
+require("vim._core.ui2").enable()
