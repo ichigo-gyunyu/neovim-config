@@ -10,9 +10,7 @@ local plugins = {
   { src = "https://github.com/stevearc/conform.nvim" },
   { src = "https://github.com/mason-org/mason.nvim" },
   { src = "https://github.com/neovim/nvim-lspconfig" },
-  { src = "https://github.com/zbirenbaum/copilot.lua" },
   { src = "https://github.com/nvim-lualine/lualine.nvim" },
-  { src = "https://github.com/leisurelicht/lualine-copilot.nvim" },
   {
     src = "https://github.com/lewis6991/gitsigns.nvim",
     version = vim.version.range("2"),
@@ -32,7 +30,7 @@ require("config-v4.plugins.barbar")
 require("config-v4.plugins.blink")
 require("config-v4.plugins.conform")
 require("config-v4.plugins.mason")
-require("config-v4.plugins.copilot")
+-- require("config-v4.plugins.copilot")
 require("config-v4.plugins.lualine")
 require("config-v4.plugins.gitsigns")
 require("config-v4.plugins.mini")
