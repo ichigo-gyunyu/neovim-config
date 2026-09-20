@@ -6,6 +6,7 @@ Snacks.setup({
   },
   terminal = {
     enabled = true,
+    shell = "fish",
   },
 })
 
